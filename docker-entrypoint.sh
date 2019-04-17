@@ -2,7 +2,7 @@
 cd /app
 
 if [ ! -e /app/.screepsrc ]; then
-    if [ -z "$STEAMKEY" ]; then 
+    if [ -z "${STEAMKEY}" ]; then 
         echo "Did you forget to set the STEAMKEY environment variable?"
         exit 1
     else
@@ -12,7 +12,7 @@ if [ ! -e /app/.screepsrc ]; then
         echo "Installing..."
         npm i screeps --save
 
-        echo "Initializing screeps using API key ${STEAMKEY}..."
+        echo "Initializing screeps..."
         echo "${STEAMKEY}" | npx screeps init
 
         echo "Initializing mods..."
