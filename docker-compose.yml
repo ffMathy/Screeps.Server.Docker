@@ -14,7 +14,7 @@ services:
       restart: always    
   screeps:
       container_name: screeps
-      build: .
+      image: ffmathy/screeps-server
       ports:
         - "21025:21025"
       environment:
