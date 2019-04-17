@@ -1,6 +1,4 @@
 FROM node:8.11.1-stretch
-ARG STEAMKEY
-ENV STEAMKEY $STEAMKEY
 VOLUME /app
 WORKDIR /app 
 
