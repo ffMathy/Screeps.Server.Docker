@@ -17,3 +17,8 @@ docker exec -it screeps npx screeps cli
 ```
 system.resetAllData()
 ```
+
+## Setting password for specific user
+```
+setPassword('Username', 'YourDesiredPassword')
+```
