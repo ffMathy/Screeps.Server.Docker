@@ -3,7 +3,6 @@ VOLUME /app
 WORKDIR /app 
 
 ENV \
- STEAMKEY=${STEAMKEY} \
  DB_PATH=/app/db.json \
  ASSET_DIR=/app/assets \
  MODFILE=/app/mods.json \
