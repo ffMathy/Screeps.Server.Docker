@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - 32771:27017
+    environment:
+      MONGODB_DATABASE: "screeps"
+
+  redis:
+    container_name: redis
+    ports:
+      - 32768:6379
+    image: redis
+    restart: always
+
+volumes:
+
+networks:
