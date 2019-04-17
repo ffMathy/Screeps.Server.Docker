@@ -35,8 +35,13 @@ if [ ! -e /app/.screepsrc ]; then
        
         echo "\n[mongo]" >> .screepsrc 
         echo "host=${MONGO_LINK}" >> .screepsrc
-        echo "[redis]" >> .screepsrc
+
+        echo "\n[redis]" >> .screepsrc
         echo "host=${REDIS_LINK}" >> .screepsrc 
+
+        echo "\n[auth]" >> .screepsrc
+        echo "cpu=30" >> .screepsrc 
+        echo "preventSpawning=false" >> .screepsrc 
 
         echo "Done!"
     fi
