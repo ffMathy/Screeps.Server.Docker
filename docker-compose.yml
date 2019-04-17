@@ -5,7 +5,7 @@ services:
       image: mongo
       volumes:
         - mongo-volume:/data/db             
-      restart: always  
+      restart: always
   redis:
       container_name: redis
       image: redis
@@ -22,7 +22,7 @@ services:
         - MONGO_LINK=mongo
         - REDIS_LINK=redis
       volumes:
-        - screeps-volume:/screeps
+        - screeps-volume:/app
       depends_on:
         - mongo
         - redis
