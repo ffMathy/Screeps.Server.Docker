@@ -1,3 +1,7 @@
+First insert the Steam API key in the `docker-compose.yml` file.
+
+Then run the following commands:
+
 ```
 docker rm screeps-server
 docker rmi screeps-server

@@ -1,13 +1,12 @@
-ARG steamApiKey
-
-FROM node:8.11.1-stretch
-ENV SCREEPS_VERSION 3.3.0
-WORKDIR /screeps
-RUN yarn add screeps@"$SCREEPS_VERSION"
+ARG STEAMKEY
 
 FROM node:8.11.1-stretch
 VOLUME /screeps
 WORKDIR /screeps
+RUN npm i screeps
+RUN npm i screepsmod-auth
+RUN npm i 
+RUN npx screeps init
 ENV DB_PATH=/screeps/db.json ASSET_DIR=/screeps/assets \
         MODFILE=/screeps/mods.json GAME_PORT=21025 \
         GAME_HOST=0.0.0.0 CLI_PORT=21026 CLI_HOST=0.0.0.0 \
