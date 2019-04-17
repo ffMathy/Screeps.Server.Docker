@@ -14,10 +14,13 @@ services:
       restart: always    
   screeps:
       container_name: screeps
-      build: .    
+      build:
+        context: .   
+        args:
+          - STEAMKEY=
       ports:
         - "21025:21025"
-      environment:      
+      environment:
         - MONGO_LINK=mongo
         - REDIS_LINK=redis
       volumes:
