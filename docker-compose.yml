@@ -1,32 +1,31 @@
 version: '3.3'
 services:
-    mongo:
-        container_name: mongo
-        image: mongo
-        volumes:
-          - mongo-volume:/data/db             
-        restart: always  
-    redis:
-        container_name: redis
-        image: redis
-        volumes:
-          - redis-volume:/data             
-        restart: always    
-    screeps:
-        container_name: screeps
-        image: codejanovic/screeps      
-        ports:
-          - "21025:21025"
-        environment:
-          - STEAMKEY=YOUR_STEAMKEY_GOES_HERE       
-          - MONGO_LINK=mongo
-          - REDIS_LINK=redis
-        volumes:
-          - screeps-volume:/screeps
-        depends_on:
-          - mongo
-          - redis
-        restart: always
+  mongo:
+      container_name: mongo
+      image: mongo
+      volumes:
+        - mongo-volume:/data/db             
+      restart: always  
+  redis:
+      container_name: redis
+      image: redis
+      volumes:
+        - redis-volume:/data             
+      restart: always    
+  screeps:
+      container_name: screeps
+      build: .    
+      ports:
+        - "21025:21025"
+      environment:      
+        - MONGO_LINK=mongo
+        - REDIS_LINK=redis
+      volumes:
+        - screeps-volume:/screeps
+      depends_on:
+        - mongo
+        - redis
+      restart: always
 
 volumes:
     mongo-volume:
