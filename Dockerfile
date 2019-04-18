@@ -15,5 +15,6 @@ ENV \
  DRIVER_MODULE="@screeps/driver"
 
 COPY "docker-entrypoint.sh" /
-RUN chmod +x /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh \
+  && ln -s /app/node_modules/.bin/* /usr/local/bin/ 
 ENTRYPOINT ["/docker-entrypoint.sh"]
