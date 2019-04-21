@@ -4,17 +4,13 @@ services:
       container_name: mongo
       image: mongo
       volumes:
-        - ./mongo-volume:/data/db             
+        - mongo-volume:/data/db             
       restart: always
-      ports:
-        - "27017:27017"
   redis:
       container_name: redis
       image: redis
       volumes:
-        - ./redis-volume:/data   
-      ports:
-        - "6379:6379"          
+        - redis-volume:/data            
       restart: always    
   screeps:
       container_name: screeps
