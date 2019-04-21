@@ -1,19 +1,19 @@
 version: '3.7'
 services:
   mongo:
-      container_name: mongo
+      container_name: screeps-mongo
       image: mongo
       volumes:
         - mongo-volume:/data/db             
       restart: always
   redis:
-      container_name: redis
+      container_name: screeps-redis
       image: redis
       volumes:
         - redis-volume:/data            
       restart: always    
   screeps:
-      container_name: screeps
+      container_name: screeps-server
       image: ffmathy/screeps-server
       ports:
         - "21025:21025"
