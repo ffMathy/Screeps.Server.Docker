@@ -11,7 +11,7 @@ docker-compose run -e STEAMKEY=A717F6EFB10AB5DD601F907F4E7F044D --name screeps-s
 
 # CLI access
 ```
-docker exec -it screeps npx screeps cli
+docker exec -it screeps-server npx screeps cli
 ```
 
 ## Resetting all data
