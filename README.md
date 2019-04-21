@@ -6,7 +6,7 @@ Meant to be started with `docker-compose.yml` here: https://raw.githubuserconten
 
 # Manual build
 ```
-docker-compose run -e STEAMKEY=A717F6EFB10AB5DD601F907F4E7F044D --name screeps-server screeps-server
+docker-compose run -e STEAMKEY=A717F6EFB10AB5DD601F907F4E7F044D --name screeps-server --service-ports screeps-server
 ```
 
 # CLI access

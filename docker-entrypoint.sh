@@ -17,6 +17,7 @@ if [ ! -e /app/.screepsrc ]; then
 
         echo "Initializing mods..."
         npm install screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-features  
+
         echo "{
             \"mods\": [
                 \"node_modules/screepsmod-mongo\",
@@ -42,6 +43,8 @@ if [ ! -e /app/.screepsrc ]; then
         echo "\n[auth]" >> .screepsrc
         echo "cpu=30" >> .screepsrc 
         echo "preventSpawning=false" >> .screepsrc 
+
+        echo "system.resetAllData()" | npx screeps cli
 
         echo "Done!"
     fi
