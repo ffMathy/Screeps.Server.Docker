@@ -19,8 +19,8 @@ services:
         - "21025:21025"
       environment:
         - STEAMKEY=
-        - MONGO_LINK=mongo
-        - REDIS_LINK=redis
+        - MONGO_LINK=screeps-mongo
+        - REDIS_LINK=screeps-redis
       volumes:
         - ./screeps-volume:/app
       depends_on:
