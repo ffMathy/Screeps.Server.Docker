@@ -1,6 +1,6 @@
 FROM node:8.11.1-stretch
 VOLUME /app
-WORKDIR /app 
+WORKDIR /app
 
 ENV \
  DB_PATH=/app/db.json \
