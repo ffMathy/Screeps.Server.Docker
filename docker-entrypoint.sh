@@ -42,9 +42,7 @@ if [ ! -e /app/.screepsrc ]; then
 
         echo "\n[auth]" >> .screepsrc
         echo "cpu=30" >> .screepsrc 
-        echo "preventSpawning=false" >> .screepsrc 
-
-        echo "system.resetAllData()" | npx screeps cli
+        echo "preventSpawning=false" >> .screepsrc
 
         echo "Done!"
     fi
