@@ -16,14 +16,15 @@ if [ ! -e /app/.screepsrc ]; then
         echo "${STEAMKEY}" | npx screeps init
 
         echo "Initializing mods..."
-        npm install screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-features  
+        npm install screepsmod-mongo screepsmod-gcltocpu screepsmod-auth screepsmod-tickrate screepsmod-features  
 
         echo "{
             \"mods\": [
                 \"node_modules/screepsmod-mongo\",
                 \"node_modules/screepsmod-auth\",
                 \"node_modules/screepsmod-tickrate\",
-                \"node_modules/screepsmod-features\"
+                \"node_modules/screepsmod-features\",
+                \"node_modules/screepsmod-gcltocpu\"
             ],
             \"bots\": {
                 \"simplebot\": \"node_modules/@screeps/simplebot/src\"
