@@ -33,5 +33,3 @@ volumes:
       driver: local
     redis-volume:
       driver: local
-    screeps-volume:
-      driver: local
