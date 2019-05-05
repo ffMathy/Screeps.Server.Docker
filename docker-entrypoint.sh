@@ -50,4 +50,4 @@ if [ ! -e /app/.screepsrc ]; then
 fi
 
 echo "Starting..."
-npx screeps start
+npx screeps start --runners_cnt $(nproc) --processors_cnt $(nproc)
